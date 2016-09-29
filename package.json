@@ -1,0 +1,16 @@
+{
+  "name": "permutations",
+  "version": "1.0.0",
+  "description": "Toy problem",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./node_modules/.bin/lab -a code -v"
+  },
+  "author": "WesTyler",
+  "license": "ISC",
+  "dependencies": {
+    "code": "^4.0.0",
+    "hoek": "^4.1.0",
+    "lab": "^11.1.0"
+  }
+}
