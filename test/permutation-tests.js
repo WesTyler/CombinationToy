@@ -15,9 +15,9 @@ describe('Permutations', () => {
 
         const requirementSet = ['positive', 'min', 'max'];
         const exclusionList = {
-            positive: ['positive'],
-            min     : ['min'],
-            max     : ['max']
+            positive: [],
+            min     : [],
+            max     : []
         };
 
         const allowedPermutations = Permutations(requirementSet, exclusionList);
@@ -37,10 +37,10 @@ describe('Permutations', () => {
 
         const requirementSet = ['positive', 'min', 'max', 'negative'];
         const exclusionList = {
-            positive: ['positive', 'negative'],
-            min     : ['min'],
-            max     : ['max'],
-            negative: ['negative', 'positive']
+            positive: ['negative'],
+            min     : [],
+            max     : [],
+            negative: ['positive']
         };
 
         const allowedPermutations = Permutations(requirementSet, exclusionList);
@@ -74,15 +74,15 @@ describe('Permutations', () => {
             'multiple'
         ];
         const exclusionList = {
-            positive : ['positive','negative'],
-            negative : ['negative','positive'],
-            precision: ['precision','integer', 'multiple'],
-            integer  : ['integer','precision'],
-            multiple : ['multiple','precision'],
-            max      : ['max','less'],
-            less     : ['less','max'],
-            min      : ['min','greater'],
-            greater  : ['greater','min']
+            positive : ['negative'],
+            negative : ['positive'],
+            precision: ['integer', 'multiple'],
+            integer  : ['precision'],
+            multiple : ['precision'],
+            max      : ['less'],
+            less     : ['max'],
+            min      : ['greater'],
+            greater  : ['min']
         };
 
         const allowedPermutations = Permutations(requirementSet, exclusionList);

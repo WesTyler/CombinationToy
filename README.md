@@ -10,28 +10,29 @@ The order of the outer array is not important. The order of the values in the in
 
 Example:
 ```Javascript
-const values = ['a', 'b', 'c', 'd'];
+const values = ['positive', 'negative', 'minimum', 'maximum'];
 const excluded = {
-  a: ['c'],
-  b: [],
-  c: ['a'],
-  d: []
+  positive: ['negative'],
+  negative: ['positive'],
+  minimum : [],
+  maximum : []
 };
 
 const validCombinations = permutations(values, excluded);
 
 /*
   [
-    ['a'],
-    ['b'],
-    ['c'],
-    ['d'],
-    ['a', 'b'],
-    ['a', 'd'],
-    ['b', 'c'],
-    ['b', 'd'],
-    ['c', 'd'],
-    ['b', 'c', 'd']
+    ['positive'],
+    ['negative'],
+    ['minimum'],
+    ['maximum'],
+    ['positive', 'minimum'],
+    ['positive', 'maximum'],
+    ['positive', 'minimum', 'maximum'],
+    ['negative', 'minimum'],
+    ['negative', 'maximum'],
+    ['negative', 'minimum', 'maximum'],
+    ['minimum', 'maximum']
   ]
 */
 ```
