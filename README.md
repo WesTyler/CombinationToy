@@ -1,5 +1,5 @@
 # PermutationToy
-Toy problem: permutations with exclusion pairs.
+Toy problem: combinations with exclusion pairs.
 
 ## Goal
 Define the function in permutations.js to pass tests in test/permutation-tests.js
