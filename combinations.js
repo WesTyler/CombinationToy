@@ -2,11 +2,11 @@
 
 const Hoek = require('hoek');
 
-const permutations = function (requirements, exclusionSet) {
+const combinations = function (requirements, exclusionSet) {
 
     const overallSet = {};
 
-    const recursivePermutations = function (requirementSet, cumulativeSet) {
+    const recursiveCombinations = function (requirementSet, cumulativeSet) {
 
         requirementSet.forEach((currentRequirement, index) => {
 
@@ -20,12 +20,12 @@ const permutations = function (requirements, exclusionSet) {
             }
 
             if (requirementSet.slice(index + 1).length > 0) {
-                return recursivePermutations(requirementSet.slice(index + 1), newCumulativeSet);
+                return recursiveCombinations(requirementSet.slice(index + 1), newCumulativeSet);
             }
         });
     };
 
-    recursivePermutations(requirements, []);
+    recursiveCombinations(requirements, []);
 
     return Object.keys(overallSet).map((set) => {
 
@@ -33,4 +33,4 @@ const permutations = function (requirements, exclusionSet) {
     });
 };
 
-module.exports = permutations;
+module.exports = combinations;
