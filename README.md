@@ -1,8 +1,8 @@
-# PermutationToy
+# CombinationToy
 Toy problem: combinations with exclusion pairs.
 
 ## Goal
-Define the function in permutations.js to pass tests in test/permutation-tests.js
+Define the function in combinations.js to pass tests in test/combination-tests.js
 
 Given a set of values and a list of exclusions (pairs of values that cannot be combined together), write a function that returns all combinations of values.
 
@@ -18,7 +18,7 @@ const excluded = {
   maximum : []
 };
 
-const validCombinations = permutations(values, excluded);
+const validCombinations = combinations(values, excluded);
 
 /*
   [
